@@ -11,12 +11,14 @@ Arguments:
     """)
     exit()
 
+
 def get_fibb_sequence(max: int):
     a,b = 0,1
 
     while a <= max:
         yield a
         a, b = b, a + b
+
 
 def print_results(generator):
     odds = []
@@ -32,10 +34,10 @@ def print_results(generator):
 
     print(f"\nSum of odds: {sum(odds)}")
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         usage()
-        print(len(sys.argv))
 
     try:
         MAX = int(sys.argv[1])
